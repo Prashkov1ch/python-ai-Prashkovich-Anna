@@ -67,7 +67,7 @@ python-ai-Ivanov-Ivan/
 | Неделя | Платформа | Регистрация |
 |--------|-----------|-------------|
 | 1 | LeChat Mistral | https://chat.mistral.ai |
-| 2 | Qwen | https://qwen.ai |
+| 2 | Qwen | https://chat.qwen.ai |
 | 3 | DeepSeek | https://chat.deepseek.com |
 
 **Шаблон промпта для начинающих:**
