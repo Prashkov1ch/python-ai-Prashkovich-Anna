@@ -1,4 +1,5 @@
 # Запрос для получения данных о морях с указанием океана, площади и объекта, в честь которого названо море
+# Request for data on seas, including the ocean, area, and object after which the sea is named
 SELECT
   ?море ?мореLabel
   ?океан ?океанLabel
