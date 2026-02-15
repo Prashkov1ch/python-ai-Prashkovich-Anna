@@ -10,8 +10,6 @@ WHERE {
   ?море wdt:P361 ?океан.        # Является частью океана
   ?море wdt:P2046 ?площадь.      # Площадь моря
   OPTIONAL { ?море wdt:P138 ?названоВЧесть. }  # Названо в честь (необязательно)
-  SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "ru".
-  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru,en,mul" }
 }
 ORDER BY DESC(?площадь)
