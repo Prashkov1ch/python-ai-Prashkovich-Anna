@@ -1,15 +1,19 @@
-# Запрос для получения данных о морях с указанием океана, площади и объекта, в честь которого названо море
-# Request for data on seas, including the ocean, area, and object after which the sea is named
+# Запрос для получения данных о морях с указанием океана, площади, глубины, координат и объекта, в честь которого названо море
+# Request for data on seas, including the ocean, area, depth, coordinates, and the object after which the sea is named
 SELECT
-  ?море ?мореLabel
-  ?океан ?океанLabel
-  ?площадь
-  ?названоВЧесть ?названоВЧестьLabel
+  ?sea
+  ?ocean
+  ?area
+  ?depth
+  ?coordinates
+  ?named_after
 WHERE {
-  ?море wdt:P31 wd:Q165.        # Экземпляр "море"
-  ?море wdt:P361 ?океан.        # Является частью океана
-  ?море wdt:P2046 ?площадь.      # Площадь моря
-  OPTIONAL { ?море wdt:P138 ?названоВЧесть. }  # Названо в честь (необязательно)
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru,en,mul" }
+  ?sea wdt:P31 wd:Q165.                # Экземпляр "море"
+  OPTIONAL { ?sea wdt:P361 ?ocean. }   # Является частью океана (опционально)
+  OPTIONAL { ?sea wdt:P2046 ?area. }   # Площадь моря (опционально)
+  OPTIONAL { ?sea wdt:P4511 ?depth. }  # Вертикальная глубина (опционально)
+  OPTIONAL { ?sea wdt:P625 ?coordinates. } # Координаты (опционально)
+  OPTIONAL { ?sea wdt:P138 ?named_after. }  # Названо в честь (необязательно)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru,en,mul,tt,ba" }
 }
-ORDER BY DESC(?площадь)
+ORDER BY DESC(?area)
