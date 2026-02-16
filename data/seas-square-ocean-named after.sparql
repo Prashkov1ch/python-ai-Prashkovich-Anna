@@ -1,12 +1,12 @@
 # Запрос для получения данных о морях с указанием океана, площади, глубины, координат и объекта, в честь которого названо море
 # Request for data on seas, including the ocean, area, depth, coordinates, and the object after which the sea is named
 SELECT
-  ?sea
-  ?ocean
+  ?sea  ?seaLabel
+  ?oceanLabel
   ?area
   ?depth
   ?coordinates
-  ?named_after
+  ?named_afterLabel
 WHERE {
   ?sea wdt:P31 wd:Q165.                # Экземпляр "море"
   OPTIONAL { ?sea wdt:P361 ?ocean. }   # Является частью океана (опционально)
