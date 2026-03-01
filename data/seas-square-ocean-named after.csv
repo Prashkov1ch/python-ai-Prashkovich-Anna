@@ -1,6 +1,4 @@
 sea,seaLabel,oceanLabel,area,depth,coordinates,named_afterLabel
-http://www.wikidata.org/entity/Q1239,Индийский океан,Мировой океан,70560000,3711,Point(80.0 -20.0),Индия
-http://www.wikidata.org/entity/Q1239,Индийский океан,Мировой океан,70560000,7450,Point(80.0 -20.0),Индия
 http://www.wikidata.org/entity/Q159183,Филиппинское море,Тихий океан,5000000,10911,Point(134.0 18.0),
 http://www.wikidata.org/entity/Q58705,Аравийское море,Индийский океан,3862000,5800,Point(64.0 16.0),
 http://www.wikidata.org/entity/Q37660,Южно-Китайское море,Тихий океан,3500000,5559,Point(113.0 12.0),
